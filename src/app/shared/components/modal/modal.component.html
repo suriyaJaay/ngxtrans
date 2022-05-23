@@ -1,0 +1,29 @@
+<div class="modal-wrapper">
+  <!-- <mat-progress-bar></mat-progress-bar> -->
+
+  <h1 mat-dialog-title>{{ dialogData.dialogHeader }}</h1>
+  <div mat-dialog-content>
+    <p>{{ dialogData.dialogContent }}</p>
+  </div>
+  <div mat-dialog-actions>
+   <!--  <button
+      mat-button
+      (click)="handleDialogSubmit()"
+      mat-raised-button
+      color="primary"
+      [disabled]="modalService.isAsyncOperationRunning$ | async"
+    >
+      {{ dialogData.confirmButtonLabel }}
+    </button> -->
+    <button
+      mat-button
+      cdkFocusInitial
+      (click)="closeDialog()"
+      [disabled]="modalService.isAsyncOperationRunning$ | async"
+      mat-raised-button
+      color="accent"
+    >
+      {{ dialogData.cancelButtonLabel }}
+    </button>
+  </div>
+</div>

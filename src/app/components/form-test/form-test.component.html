@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="form-wrapper mat-elevation-z2 mt-4 mb-4">
+    <form [formGroup]="testForm" (ngSubmit)="onSubmit()">
+      <div class="col-3 mb-3">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input
+            type="text"
+            formControlName="name"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f['name'].errors }"
+          />
+          <!--  <div *ngIf="submitted && f['name'].errors" class="invalid-feedback">
+<div *ngIf="f['name'].errors.required">name is required</div>
+</div> -->
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- <div class="container">
+  <div style="padding: 10px">
+    <button mat-raised-button (click)="openDialogOne()" color="primary">
+      Open Dialog One
+    </button>
+  </div>
+  <div style="padding: 10px">
+    <button mat-raised-button (click)="openDialogTwo()" color="warn">
+      Open Dialog Two
+    </button>
+  </div>
+</div> -->

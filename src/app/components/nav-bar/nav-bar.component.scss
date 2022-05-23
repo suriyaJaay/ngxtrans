@@ -1,0 +1,47 @@
+$color-white: #ffffff;
+
+.spacer {
+  flex-grow: 1;
+}
+
+a {
+  text-decoration: none;
+  color: $color-white;
+}
+
+.github-link {
+  font-size: 16px;
+}
+
+.fa-github {
+  font-size: 20px;
+}
+
+mat-toolbar-row {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-title {
+  button {
+    font-size: 18px;
+  }
+}
+
+.menu-name {
+  display: flex;
+  column-gap: 10px;
+  flex-flow: row;
+}
+
+.mat-select {
+  width: 14%;
+  font-size: 14px;
+  border-bottom: 1.5px solid #ffffff;
+  /*  .mat-select-trigger {
+    width: 80%;
+  } */
+  .mat-select-value {
+    width: 0% !important;
+  }
+}
